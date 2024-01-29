@@ -68,3 +68,54 @@ export const AboutText = styled.div`
     font-size: 0.938rem;
     margin: 0.5rem 0 1.1rem;
 `;
+
+// Testimoni
+export const TestiStyle = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 0 20px;
+
+    .box {
+        padding: 20px;
+        border-radius: 0.5rem;
+        text-align: center;
+        background: #3887BE;
+
+        p {
+            font-size: 0.938rem;
+        }
+        
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0.5rem 0 0.5rem;
+        }
+    }
+`;
+
+export const TestiForm = styled.div`
+    width: 500px;
+    margin: 0 auto;
+  
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+`;
