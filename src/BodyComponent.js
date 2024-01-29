@@ -4,16 +4,38 @@ import {
   BennerStyle, ButtonStyle, BennerText,
   AboutStyle, AboutImg, AboutHeading, AboutText
 } from "./StyledBody";
+import HelloButton from "./HelloButtonComponent";
 
 
 class Body extends Component{
+  handleGamelabClick = () => {
+    window.location.href = "https://www.gamelab.id/."
+  }
+  handleDashboardClick = () => {
+    window.location.href = "https://www.gamelab.id/dashboard. "
+  }
+  handleClick = () => {
+    const pesan = 'Halo Gamelab Indonesia!';
+    this.props.terimaPesan(pesan);
+  };
+  constructor() {
+    super();
+    this.state = {
+      pesanDariHelloButton: ''
+    };
+  }
+
+  terimaPesan = (pesan) => {
+    this.setState({ pesanDariHelloButton: pesan });
+  };
   render() {
+    console.log('HelloButton rendered'); // Tambahkan log untuk melihat render
     return (
       <body>
   <BennerStyle>
         <BennerText>
           <h3>Raih Masa Depan Brilian dengan Optimasi Skill Digital</h3>
-          <ButtonStyle>Gamelab.ID</ButtonStyle>
+          <ButtonStyle onClick={this.handleGamelabClick}>Gamelab.ID</ButtonStyle>
         </BennerText>
   </BennerStyle>
   <AboutStyle>
@@ -23,16 +45,19 @@ class Body extends Component{
       <AboutText>
           <AboutHeading>GAMELAB.ID</AboutHeading>
           <p>GAMELAB.ID membantumu mengoptimalkan skill agar siap kerja melalui program pelatihan, magang online, dan kelas intensif yang diampu oleh para profesional di bidangnya.</p>
-          <ButtonStyle>Dashboard</ButtonStyle>
+          <ButtonStyle onClick={this.handleDashboardClick}>Dashboard</ButtonStyle>
       </AboutText>
+      <HelloButton terimaPesan={this.terimaPesan} />
+        <br/>
+        <p>Pesan Dariku: {this.state.pesanDariHelloButton}</p>
   </AboutStyle>
 </body>
     );
   }
 }
 export default Body;
-/*
-class HelloButton extends React.Component {
+
+/*class HelloButton extends React.Component {
   handleClick = () => {
     const pesan = 'Halo Gamelab Indonesia!';
     this.props.terimaPesan(pesan);
@@ -75,5 +100,5 @@ class Body extends Component {
     );
   }
 }
-*/
+export default HelloButton;*/
 

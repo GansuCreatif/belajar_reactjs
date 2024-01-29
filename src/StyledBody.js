@@ -21,6 +21,15 @@ export const ButtonStyle = styled.button`
     color: #FFFFFFF;
     font-weight: 500;
     border: none;
+
+    &:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #3887BE;
+    border-color: #3887BE;
+    border: 2px solid;
+    }
+
 `;
 
 export const BennerText = styled.div`
