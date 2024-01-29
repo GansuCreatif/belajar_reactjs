@@ -12,7 +12,7 @@ class Body extends Component{
     window.location.href = "https://www.gamelab.id/."
   }
   handleDashboardClick = () => {
-    window.location.href = "https://www.gamelab.id/dashboard. "
+    window.location.href = "https://www.gamelab.id/dashboard"
   }
   handleClick = () => {
     const pesan = 'Halo Gamelab Indonesia!';
