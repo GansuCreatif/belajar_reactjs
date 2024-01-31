@@ -1,4 +1,4 @@
-import React, { /*useState,  useEffect*/ Component } from 'react';
+import React, { /*useState,  useEffect*/ /*Component*/ } from 'react';
 import Header from './HeaderComponent';
 import Body from './BodyComponent';
 import Footer from './FooterComponent';
@@ -69,8 +69,7 @@ export default ToggleButton;*/
 
 export default LifecycleButton;*/
 
-class App extends Component{
-  render() {
+const App =  () => {
     return(
       <>
         <Header/>
@@ -78,6 +77,5 @@ class App extends Component{
         <Footer/>
       </>
     );
-  }
-}
+};
 export default App;
